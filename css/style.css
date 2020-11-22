@@ -1,0 +1,177 @@
+:root {
+    font-size: 20px;
+    /* color */
+    --violet: hsl(257, 40%, 49%);
+    --softMagenta: hsl(300, 69%, 71%);
+    --white: hsl(0, 0%, 100%);
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* GLOBAL */
+body {
+    font-size: 15px;
+    color: var(--white);
+    background-color: var(--violet);
+    font-family: 'Open Sans', sans-serif;
+    background-image: url(../images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+
+/* main */
+main {
+    max-width: 80%;
+    margin: auto;
+}
+
+/* NAVBAR */
+.navbar__logo img {
+    max-width: 6rem;
+    margin: 1.5rem 0 3rem;
+}
+
+
+/* INTRODUCTION */
+.introduction {
+    text-align: center;
+    line-height: 1.5;
+    margin: 1.5rem 0;
+}
+
+.introduction h2,
+.introduction__button {
+    font-family: 'Poppins', sans-serif;
+}
+
+.introduction p {
+    padding: 0.5rem 0 1rem;
+}
+
+.introduction__button {
+    padding: 0.5em 3.5em;
+    border-radius: 1rem;
+    border: none;
+    background-color: var(--white);
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgb(56, 28, 100);
+    color: var(--violet);
+}
+
+.introduction__button:active {
+    background-color: var(--softMagenta);
+    color: var(--white);
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact i {
+    font-size: 0.6rem;
+    color: var(--white);
+    margin: 0.5rem 0.2rem;
+    padding: 0.3rem;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.contact i.fa-facebook-f {
+    padding: 0.3rem 0.4rem;
+}
+
+.contact i:active {
+    color: var(--softMagenta);
+    border: 1px solid var(--softMagenta);
+}
+
+.attribution {
+    text-align: center;
+}
+
+.attribution a {
+    text-decoration: none;
+    color: yellow;
+}
+
+
+
+/* tablet breakpoints */
+@media (min-width: 768px) {
+
+    body {
+        background-image: url(../images/bg-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    main {
+        max-width: 95%;
+    }
+
+    .flex-container {
+        display: flex;
+    }
+
+    .hero {
+        flex: 50%;
+        margin-right: 2rem;
+    }
+
+    .introduction {
+        flex: 35%;
+        text-align: left;
+    }
+
+    .introduction p,
+    .introduction__button {
+        font-size: 1.5vw;
+    }
+
+    .contact {
+        text-align: right;
+    }
+
+}
+
+
+@media (min-width: 991px) {
+    main {
+        max-width: 85%;
+    }
+
+    .navbar__logo img {
+        max-width: 8rem;
+    }
+
+    .hero {
+        flex: 40%;
+        margin-right: 3rem;
+    }
+
+    .introduction {
+        flex: 35%;
+    }
+
+    .introduction h2 {
+        font-size: 3vw;
+    }
+
+    .introduction p,
+    .introduction__button {
+        font-size: 1.2vw;
+    }
+}
